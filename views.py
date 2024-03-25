@@ -1,7 +1,7 @@
 from urllib.parse import unquote_plus
 from utils import load_data, load_template, add_note, build_response
 
-def index(request):
+def index(request, file='index.html'):
     # A string de request sempre começa com o tipo da requisição (ex: GET, POST)
     if request.startswith('POST'):
         request = request.replace('\r', '')  # Remove caracteres indesejados
@@ -24,4 +24,4 @@ def index(request):
     ]
     notes = '\n'.join(notes_li)
 
-    return build_response(body=load_template('prova.html').format(notes=notes))
+    return build_response(body=load_template(file).format(notes=notes))

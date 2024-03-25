@@ -26,16 +26,16 @@ while True:
     filepath = CUR_DIR / route
     if filepath.is_file():
         response = build_response() + read_file(filepath)
-        
+
     elif route == '':
         if request.split()[0] == 'POST' and len(request.split('\n\n')) == 1:
             request += client_connection.recv(1024).decode()
-        response = index(request)
+        response = index(request, file='index.html')
 
     elif route == 'prova':
         if request.split()[0] == 'POST' and len(request.split('\n\n')) == 1:
             request += client_connection.recv(1024).decode()
-        response = index(request)
+        response = index(request, file='prova.html')
 
     elif route.startswith('delete'):
         note_id = route.split('/')[1]  
