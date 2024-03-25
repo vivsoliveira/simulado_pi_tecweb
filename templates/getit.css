@@ -1,0 +1,283 @@
+/*
+Algumas informações úteis e dicas:
+  - Fontes disponíveis:
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Permanent Marker', cursive;
+  - Cores:
+    Tons de amarelo:
+      #e4fc2b
+      #e0d426
+      #f7d736
+      #e0af26
+      #fcb02b
+    Tons de cinza:
+      #2c2c2c
+      #4c4c4c
+    Cores dos cards:
+      #ead3a7
+      #9de0f5
+      #ef89ba
+      #fae890
+      #abe9c1
+  - Sombra: https://codepen.io/sdthornton/pen/wBZdXq
+ */
+ .logo {
+  width: 90px;
+  height: 50px;
+  margin-left: 0.3rem;
+  margin-top: 0.5rem;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+.subtitle {
+  font-size: 1.2em;
+  display: flex;
+  align-items: center; 
+  color: #2c2c2c;
+  font-size: large;
+  margin-left: 1rem;
+}
+.appbar{
+  display: flex;
+  background-color: #f7d736;
+  height: 4.5rem;
+  margin-bottom: 2rem;
+  justify-content:flex-start;
+  align-items: center;
+  box-shadow: 0 10px 28px rgba(0,0,0,0.30), 0 10px 12px rgba(0,0,0,0.22);
+}
+.form-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 28px rgba(0,0,0,0.30), 0 10px 12px rgba(0,0,0,0.22);
+  width: 36%;
+  border-radius: 0.3rem;
+}
+input {
+  border: none;
+  width: 80%;
+  color: #2c2c2c;
+  font-size: 17px;
+  margin-bottom: 0.7rem;
+  padding-right: 5rem;
+  font-weight: 550;
+  padding-top: 0.7rem;
+}
+textarea {
+  border: none;
+  width: 80%;
+  color: #2c2c2c;
+  font-size: small;
+  font-family: "Roboto", sans-serif;
+  padding-right: 5rem;
+  font-weight: 550;
+}
+/* .btn {
+  padding: 0.5rem;
+  border: none;
+  width: 94%;
+  color: #2c2c2c;
+  font-size: small;
+  background-color: #f7d736;
+  box-shadow: #2c2c2c 0px 0px 8px;
+  cursor: pointer;
+  border-radius: 0.2rem;
+  margin-bottom: 0.5rem;
+} */
+html,
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+/* Você pode usar o CSS comentado abaixo, se ajudar */
+/* Fonte: https://codepen.io/CrisWoler/pen/ogXBLj */
+.btn {
+  position: relative;
+  display: block;
+  padding: 10px 15px;
+  width: 96%;
+  overflow: hidden;
+  margin-bottom: 0.5rem;
+  border-width: 0;
+  outline: none;
+  border-radius: 2px;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.6);
+  color: black;
+  background-color: #f7d736;
+
+  transition: background-color 0.3s;
+}
+
+.btn > * {
+  position: relative;
+}
+
+.btn:before {
+  content: "";
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  display: block;
+  width: 0;
+  padding-top: 0;
+
+  border-radius: 100%;
+
+  background-color: rgba(236, 240, 241, 0.3);
+
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.btn:active:before {
+  width: 120%;
+  padding-top: 120%;
+
+  transition: width 0.2s ease-out, padding-top 0.2s ease-out;
+}
+
+.container{
+  display: flex;
+  flex-direction: column;
+  margin-top: 2rem;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.card-container{
+  display: flex;
+  flex-direction: row;
+  align-content: space-around;
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.card {
+  width: 12rem;
+  height: 7rem;
+  border-radius: 8px;
+  font-family: 'Permanent Marker', cursive;
+  box-shadow: 0 10px 28px rgba(0,0,0,0.30), 0 10px 12px rgba(0,0,0,0.22);
+  margin-left: 0.2rem;
+  margin-right: 0.2rem;
+  border: 0.5px solid #ead3a7;
+}
+
+.card-title {
+  padding-top: 6px;
+  padding-left: 8px;
+  padding-right: 8px;
+  margin-top: 0;
+  color: black;
+  font-size: 17px;
+  font-family: 'Permanent Marker', cursive;
+  font-weight: 700;
+  display: flex;
+  flex: row;
+  flex-wrap: wrap;
+}
+
+.card-content{
+  margin-top: 0.6rem;
+  padding-left: 7px;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: 'Permanent Marker', cursive;
+  color: #2c2c2c;
+  display: flex;
+  justify-content: center;
+}
+
+.card.card-color-1 {
+  background-color: #ead3a7 !important;
+}
+
+.card.card-color-2 {
+  background-color: #9de0f5 !important;
+}
+
+.card.card-color-3 {
+  background-color: #ef89ba !important;
+}
+
+.card.card-color-4 {
+  background-color: #fae890 !important;
+}
+
+.card.card-color-5 {
+  background-color: #abe9c1 !important;
+}
+
+.card.card-rotation-1 {
+  transform: rotate(-4deg);
+}
+
+.card.card-rotation-2 {
+  transform: rotate(-3deg);
+}
+
+.card.card-rotation-3 {
+  transform: rotate(-2deg);
+}
+
+.card.card-rotation-4 {
+  transform: rotate(-1deg);
+  margin-top: 1rem;
+}
+
+.card.card-rotation-5 {
+  transform: rotate(0deg);
+}
+
+.card.card-rotation-6 {
+  transform: rotate(1deg);
+}
+
+.card.card-rotation-7 {
+  transform: rotate(2deg);
+}
+
+.card.card-rotation-8 {
+  transform: rotate(3deg);
+}
+
+.card.card-rotation-9 {
+  transform: rotate(4deg);
+}
+
+.card.card-rotation-10 {
+  transform: rotate(5deg);
+}
+
+.card.card-rotation-11 {
+  transform: rotate(6deg);
+}
+
+.card-container {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+  gap: 0.6rem;
+}
+.deletar{
+  margin-top: 0.3rem;
+  margin-left: 10.2rem;
+  position: absolute;
+  cursor: pointer;
+  width: 1.2rem;
+  height: 1.2rem;
+}
