@@ -24,4 +24,4 @@ def index(request):
     ]
     notes = '\n'.join(notes_li)
 
-    return build_response(body=load_template('index.html').format(notes=notes))
+    return build_response(body=load_template('prova.html').format(notes=notes))
