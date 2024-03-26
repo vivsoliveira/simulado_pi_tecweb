@@ -1,5 +1,5 @@
 from urllib.parse import unquote_plus
-from utils import load_data, load_template, add_note, build_response
+from utils import load_data, load_template, add_note, build_response, conta_notas
 
 def index(request, file='index.html'):
     # A string de request sempre começa com o tipo da requisição (ex: GET, POST)
@@ -23,5 +23,5 @@ def index(request, file='index.html'):
         for dados in load_data()
     ]
     notes = '\n'.join(notes_li)
-
-    return build_response(body=load_template(file).format(notes=notes))
+    quantidade_notas = conta_notas()
+    return build_response(body=load_template(file).format(notes=notes, quantidade=quantidade_notas))

@@ -1,3 +1,4 @@
+import sqlite3
 from database import Database, Note
 import json
 import database
@@ -33,3 +34,7 @@ def build_response(body='', code=200, reason='OK', headers=''):
 def delete_note(note_id):
     db = Database('notes') 
     db.delete(note_id)
+
+def conta_notas():
+    db = Database('notes') 
+    return len(db.get_all())
